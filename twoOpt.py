@@ -5,7 +5,7 @@ Created on Sat Aug  6 23:34:47 2022
 
 @author: Boris Pérez-Cañedo
 """
-import random2, sys, time
+import random, sys, time
 
 def two_opt(matrix, route):
     # Modified code from http://pedrohfsd.com/2017/08/09/2opt-part1.html
@@ -28,7 +28,7 @@ def two_opt(matrix, route):
     return best, best_value
  
 def random_route(ncities):
-    return [0] + random2.sample(range(1, ncities), ncities - 1) + [0]
+    return [0] + random.sample(range(1, ncities), ncities - 1) + [0]
 
 def run_2opt(matrix, max_iter):
     start = time.time()
